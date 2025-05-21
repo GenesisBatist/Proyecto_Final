@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    outline: none;
+    font-family: serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(logoSalud.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 350px;
+    background: rgb(240, 138, 92); /* naranja cálido */
+    border-radius: 7px;
+    text-align: center;
+    padding: 30px 35px 0px 35px;
+}
+
+.container header{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 30px 0px;
+    color: #5c1c0e; /* marrón oscuro */
+}
+
+.container .form-princ{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-princ form{
+    display: flex;
+    width: 400%;
+}
+
+.form-princ form .pagina{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-princ form .pagina .titulo{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    color: #7b2e19; /* terracota */
+}
+
+.form-princ form .pagina .campo{
+    height: 35px;
+    width: 350px;
+    margin: 40px 0;
+    display: flex;
+    position: relative;
+}
+
+.tabla{
+    height: 100%;
+    width: 95%;
+    align-self: center;
+    margin-top: 30px;
+    position: absolute;
+}
+
+.tabla th{
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #5c1c0e; /* marrón oscuro */
+}
+
+.form-princ form .pagina .campo .label{
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
+    float: left;
+    text-align: left;
+    width: 100%;
+    color: #7b2e19; /* terracota */
+}
+
+.form-princ form .pagina .campo input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c96f4a; /* naranja más fuerte */
+    border-radius: 5px;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+.form-princ form .pagina .campo select{
+    width: 100%;
+    border: 1px solid lightgray;
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.form-princ form .pagina .campo button{
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background: #b3472f; /* rojo tierra */
+    border-radius: 7px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-princ form .pagina .campo button:hover{
+    background: #de6b3c; /* naranja quemado */
+}
+
+.form-princ form .pagina .botones{
+    margin-top: 80px !important;
+}
+
+form .pagina .botones button.atras{
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .pagina .botones button.adelante{
+    margin-left: 3px;
+}
+
+.container .progres-bar{
+    display: flex;
+    margin: 40px 0px;
+}
+
+.container .progres-bar .paso{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.container .progres-bar .paso p{
+    font-size: 18px;
+    font-weight: 500;
+    color: #5c1c0e; /* marrón oscuro */
+    margin-bottom: 8px;    
+}
+
+.progres-bar .paso p.active{
+    color: #d25930; /* naranja fuerte */
+    transition: 0.2s;
+}
+
+.progres-bar .paso .num{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #5c1c0e;
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    transition: 0.2s;
+}
+
+.progres-bar .paso .num.active{
+    border-color: #5c1c0e;
+    background: #d25930; /* naranja fuerte */
+}
+
+.progres-bar .paso .num span{
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progres-bar .paso .num.active span{
+    color: white;
+}
+
+.progres-bar .paso .check.active{
+    display: block;
+    color: #5c1c0e;
+}
+
+.progres-bar .paso .num:before,
+.progres-bar .paso .num:after{
+    position: absolute;
+    content: '';
+    width: 44px;
+    height: 6px;
+    bottom: 11px;
+    right: -53px;
+    background: #5c1c0e;
+}
+
+.progres-bar .paso:last-child .num:before,
+.progres-bar .paso:last-child .num:after{
+    display: none;
+}
+
+.progres-bar .paso .num.active:after{
+    background: #d25930; /* naranja fuerte */
+    animation: mov_linea 0.3s linear forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes mov_linea{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+/*código CSS para mostrar mensaje de error*/
+
+.error{
+    color: red;
+    float: right;
+    text-align: right;
+}

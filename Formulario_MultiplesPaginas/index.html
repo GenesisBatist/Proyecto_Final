@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Multiples</title>
+    <link rel="stylesheet" href="stiloformulario.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>REGISTRO DE AFILIADOS Y DEPENDIENTES</header>
+
+      <div class="progres-bar">
+        <div class="paso">
+          <p>Datos</p>
+          <div class="num">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="paso">
+          <p>Familia</p>
+          <div class="num">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="paso">
+          <p>Enf</p>
+          <div class="num">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="paso">
+          <p>Int</p>
+          <div class="num">
+            <span>4</span>
+            <div class="check fas fa-check"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-princ">
+        <form action="#">
+          <!--PAGINA 1-->
+          <div class="pagina movPag">
+            <div class="titulo">DATOS PERSONALES</div>
+            <div class="campo">
+              <div class="label">
+                Nombre <b class="error" id="nombre-error"></b>
+              </div>
+              <input type="text" id="Nombre" placeholder="Nombre" />
+            </div>
+            <div class="campo">
+              <div class="label">
+                Cédula <b class="error" id="cedula-error"></b>
+              </div>
+              <input type="text" id="cedula" placeholder="Cédula" />
+            </div>
+
+            <div class="campo">
+              <div class="label">Fecha de Nacimiento</div>
+              <input type="date" id="Nacimiento" max="2002-12-31" />
+            </div>
+
+            <div class="campo">
+              <div class="label">Sexo</div>
+              <select id="sexo">
+                <option value="-1" disabled selected>Escoge una opción</option>
+                <option value="0">Masculino</option>
+                <option value="1">Femenino</option>
+                <option value="2">Sin especificar</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <div class="label">Nacionalidad</div>
+              <input type="text" id="Nacionalidad" placeholder="Nacionalidad" />
+            </div>
+
+            <div class="campo sigPag">
+              <button>Siguiente</button>
+            </div>
+          </div>
+
+          <!--PAGINA 2-->
+          <div class="pagina">
+            <div class="titulo">GRUPO FAMILIAR</div>
+            <div class="campo">
+              <table class="tabla">
+                <tr>
+                  <th>Nombre</th>
+                  <th>Parentesco</th>
+                  <th>Edad</th>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input type="text" id="Nombre" placeholder="Nombre" />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      id="Parentesco"
+                      placeholder="Parentesco"
+                    />
+                  </td>
+                  <td><input type="text" id="Edad" placeholder="Edad" /></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input type="text" id="Nombre" placeholder="Nombre" />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      id="Parentesco"
+                      placeholder="Parentesco"
+                    />
+                  </td>
+                  <td><input type="text" id="Edad" placeholder="Edad" /></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input type="text" id="Nombre" placeholder="Nombre" />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      id="Parentesco"
+                      placeholder="Parentesco"
+                    />
+                  </td>
+                  <td><input type="text" id="Edad" placeholder="Edad" /></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input type="text" id="Nombre" placeholder="Nombre" />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      id="Parentesco"
+                      placeholder="Parentesco"
+                    />
+                  </td>
+                  <td><input type="text" id="Edad" placeholder="Edad" /></td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="campo botones">
+              <button class="atras_p1 atras">Atras</button>
+              <button class="adelante_p3 adelante">Siguiente</button>
+            </div>
+          </div>
+          <!--PAGINA 3-->
+          <div class="pagina">
+            <div class="titulo">CONDICIONES PRE-EXISTENTES DE SALUD</div>
+            <div class="campo">
+              <div class="label">
+                Ha padecido o padece de alguna de estas enfermedades
+              </div>
+              <select id="Enfermedad">
+                <option value="-1" disabled selected>Escoge una opción</option>
+                <option value="0">
+                  Enfermedad Pulmonar Obstructiva Crónica (EPOC)
+                </option>
+                <option value="1">Diabetes</option>
+                <option value="2">Insuficiencia Cardíaca</option>
+                <option value="3">Enfermedades Neurológicas</option>
+                <option value="4">Obesidad</option>
+                <option value="5">Enfermadad Oncológica</option>
+                <option value="1">Insuficiencia Renal</option>
+                <option value="1">Asma</option>
+                <option value="6">Tuberculosis</option>
+                <option value="6">Otra</option>
+                <option value="6">Ninguna</option>
+              </select>
+            </div>
+            <div class="campo">
+              <div class="label">Especifique</div>
+              <input
+                type="text"
+                id="especificar"
+                placeholder="Otra Enfermedad"
+              />
+            </div>
+            <div class="campo">
+              <div class="label">Rango de tiempo</div>
+              <select id="tiempo">
+                <option value="-1" disabled selected>Escoge una opción</option>
+                <option value="0">Menos de 1 año</option>
+                <option value="1">1 a 3 años</option>
+                <option value="2">3 a 5 años</option>
+                <option value="3">Más de 5 años</option>
+                <option value="4">Ninguno</option>
+              </select>
+            </div>
+            <div class="campo botones">
+              <button class="atras_p2 atras">Atras</button>
+              <button class="adelante_p4 adelante">Siguiente</button>
+            </div>
+          </div>
+
+          <!--PAGINA 4-->
+          <div class="pagina">
+            <div class="titulo">INTERNAMIENTOS REALIZADOS</div>
+            <div class="campo">
+              <div class="label">Fecha</div>
+              <input type="date" id="fecha_int" />
+            </div>
+            <div class="campo">
+              <div class="label">Centro Médico</div>
+              <input type="text" id="Centro" placeholder="Centro Médico" />
+            </div>
+            <div class="campo">
+              <div class="label">Diagnóstico</div>
+              <input type="text" id="Diagnostico" placeholder="Diagnóstico" />
+            </div>
+
+            <div class="campo botones">
+              <button class="atras_p3 atras">Atras</button>
+              <button class="fin">Finalizar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="jsformulario.js"></script>
+  </body>
+</html>
